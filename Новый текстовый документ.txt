@@ -1,0 +1,119 @@
+class User {
+    constructor(userName, balance){
+        this.userName = userName;
+        this.balance = balance;
+    }
+    showBalance() {
+        let parent = document.querySelector('.money');
+        parent.lastChild.textContent = `${balance}$`;
+    }
+    showOrderHistory(){
+    }
+    getCart(){
+    }
+    addOrder(){
+    }
+}
+
+const user = new User ()
+user.showBalance();
+
+class Admin extends User {
+    constructor(userName, balance){
+        super(userName, balance)
+        this.userName = userName;
+        this.balance = balance;
+    }
+    showBalance() {
+        let parent = document.querySelector('.money');
+        parent.lastChild.textContent = `${balance}$`;
+    }
+    showOrderHistory(){
+    }
+    getCart(){
+    }
+    addOrder(){
+
+    }
+
+    createProduct (){
+    const createBtn = document.querySelector('.catalog__btn');
+    const nameProduct = document.getElementById('nameProduct');  
+    const priceProduct = document.getElementById('priceProduct'); 
+    
+    const quantity = document.getElementById('quantity'); 
+    
+    createBtn.addEventListener('click', () => {
+        console.log(nameProduct); 
+        console.log(priceProduct) ;
+        console.log(quantity);
+    });
+    // const catalogItem = document.createElement('li');
+    // const catalogList = document.querySelector('catalog__list');
+    // catalogItem.classList.add('catalog-item')
+    // catalogItem.innerHTML = 
+    //         `<img src=img/heartrate.png alt="heartrate" class="catalog-item__img">
+    //         <h3 class="catalog-item__title">
+    //           ${nameProduct}
+    //         </h3>
+    //         <p>
+    //           For the first steps in heart rate-based workouts
+    //         </p>
+    //         <a href="#" class="catalog-item__details">
+    //           details
+    //         </a>
+    //         <div class="catalog-item__footer">
+    //           <div class="ctalog-item__prices">
+    //             <div class="ctalog-item__old_amount">
+    //              ${quantity}
+    //             </div>
+    //             <div class="ctalog-item__price">
+    //               ${priceProduct}
+    //             </div>
+    //           </div>
+    //           <button class="catalog-item__btn">
+    //             buy
+    //           </button>
+    //         </div>`;
+    
+    //         catalogList.append(catalogItem);
+            
+    }
+
+}
+const admin = new Admin();
+admin.createProduct();
+
+
+class Product {
+    constructor(nameProduct, priceProduct, quantity){
+       this.nameProduct = nameProduct;
+       this.priceProduct = priceProduct;
+       this.quantity = quantity;  
+    }
+    substractAmount(amount){
+       return this.quantity - amount;
+    }
+}
+
+
+
+
+
+class Cart {
+    addProduct(product){
+
+    }
+    removeProduct(nameProduct){
+
+    }
+    withdraw (){
+
+    }
+    chekout(){
+
+    }
+}
+// const cart = new Cart();
+// function Order ();
+
